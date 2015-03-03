@@ -68,7 +68,12 @@ modelB.fit(b)
 
 
 
-
+"""
+This creates a score representing the data a/b projected on the model A/B and 
+sums the score array into a single value. Because the values are log scores, they are
+all fairly negative and generate fairly large negative numbers. Issue addressed further 
+down[*]
+"""
 scoreAa = modelA.score(a)
 valAa = 0;
 for pt in range(0, len(scoreAa)):
@@ -92,15 +97,23 @@ for pt4 in range(0, len(scoreBb)):
 	valBb += scoreBb[pt4]
 
 
-print valAb
-print valAa
-print valBa
-print valBb
+print "Model B on timbre data a: " + str(valAb)
+print "Model A on timbre data a: " + str(valAa)
+print "Model A on timbre data b: " + str(valBa)
+print "Model B on timbre data b: " + str(valBb)
 
+"""
+[*]: lenA and lenB here represent the number of segments in the respective song data.
+Here they are used to average the summed scores "val'Xx'"
+
+This step is necessary because without averaging them, the negative values, that you can
+see in the output would be too large and the math.exp(prob) would only be capable of producing
+0's. 
+"""
 prob = (valAb - valAa)/(2.00 * lenA) + (valBa - valBb)/(2.00 * lenB)
 
-print prob
-print math.exp(prob)
+#print prob
+print 'Song similarity: ' + str(math.exp(prob))
 
 
 

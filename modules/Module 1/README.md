@@ -20,6 +20,9 @@ DEPENDENCIES
 #############
 
 echonest.remix.audio
+
 pyechonest
+
 sklearn.mixture (available through scikit-learn)
+
 numpy

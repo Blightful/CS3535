@@ -1,7 +1,7 @@
 
 """
 Author: Walt Scarboro
-Finds timbre similarity for 2 given mp3 based on the probability that data from
+Finds timbre similarity for 2 given audio files based on the probability that data from
 one song will fall within the model for the other given song.
 
 #CURRENTLY NEEDS TUNING TO BE ABLE TO DISPLAY SIMILARITY IN MEANINGFUL MANNER#
@@ -115,6 +115,7 @@ prob = (valAb - valAa)/(2.00 * lenA) + (valBa - valBb)/(2.00 * lenB)
 
 #print prob
 print 'Song similarity: ' + str(math.exp(prob))
+print 'Song similarity: ' + str(prob)
 
 
 

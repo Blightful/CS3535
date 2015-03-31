@@ -18,7 +18,9 @@ Because the time needed to generate a GMM was just beyond an arbitrary amount of
 
 Others can use it to compare and sort songs by timbre similarity in the MSD. Though the code isn't completed it has all the relevent parts for building the models and comparing them (I will soon (hopefully) put out a revision that allows for command line querying of songs by hdf5 (md5 or song title if I can find a way to make that data more visible in the file structure). Currently the results are unsorted and verbose; if you want to use this for getting a quick comparison, I will be releasing a version that only outputs an array of tuples that display relevent Artist/Song data sorted by timbre similarity.
 
-I RECOMMEND ONLY RUNNING THIS PROGRAM ON A REASONABLY SIZED SUBSET (no more than a few hundred) UNTIL AN UPDATED VERSION IS RELEASED. As of now this code is only for demo purposes.
+In main you will see a comment directing you to edit your input HDF5GMM query. 
+
+I RECOMMEND ONLY RUNNING THIS PROGRAM ON A REASONABLY SIZED SUBSET (no more than a few hundred) UNTIL AN UPDATED VERSION IS RELEASED. As of now this code is only for demo purposes. The 'data' folder includes a subdirectory from the bottom of the MSD structure with 11 HDF5 for testing purposes but it will run on the full MSD. 
 
 The depencies all seem to be included in the Anaconda distribution; I previously was running a version of PortablePython and it did not include several of the important modules. 
 

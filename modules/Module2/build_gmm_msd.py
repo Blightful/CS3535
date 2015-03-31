@@ -69,8 +69,5 @@ if __name__ == '__main__':
     if len(sys.argv) == 1:
         print 'usage: python all_timbre_msd.py path_to_MSD'
     else:
-        timbre = get_all_timbre(sys.argv[1])
-        #print timbre
-        print len(timbre),"total segments"
-        print "mean=",np.mean(timbre,axis=0)
-        print "stdev=",np.std(timbre,axis=0)
+        get_all_timbre(sys.argv[1])
+        

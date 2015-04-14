@@ -46,7 +46,7 @@ def get_all_timbre(directory):
         if _is_hdf5(f):
             p = _get_one_timbre(path)
 
-            model = mixture.GMM(n_components=3, covariance_type='diag', random_state=None,
+            model = mixture.GMM(n_components=10, covariance_type='diag', random_state=None,
             thresh=0.01, min_covar=0.001, n_iter=1000, n_init=1, params='wmc',
             init_params='wmc')
 

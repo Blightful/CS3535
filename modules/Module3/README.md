@@ -26,7 +26,7 @@ Lastly, complexity. I can make this code more efficient and I plan on optimizing
 Others can use it to compare and sort songs by timbre similarity in the MSD.
 Right now it takes an HDF5 or Local MP3 and returns a sorted list of tuples that have Artist, Song title, and Similarity measure.  
 
-The depencies all seem to be included in the Anaconda distribution; I previously was running a version of PortablePython and it did not include several of the important modules. 
+The dependencies all seem to be included in the Anaconda distribution; I previously was running a version of PortablePython and it did not include several of the important modules. 
 
 scikit-learn (sklearn) used for mixture models
 NumPy
